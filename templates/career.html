@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+Main page
+{% endblock %}
+{% block style %}
+{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    {% block sidebar %}
+        {% include "inc-sidebar.html" %}
+    {% endblock %}
+    <div id="content">
+        <h1>My career and work experience</h1>
+        <ul>
+          <li><p>2018 - now - working as an English teacher for younger learners - WonderKids English </p></li>
+          <li>2014 - 2018 - worked as an English teacher at Anglomania</li>
+          <li>2012 - 2014 - Business English teacher at a Danish company Danfoss in Moscow, Russia</li>
+          <li>2008 - 2012 - English languge tutor in various language training centers in Fuzhou, China.</li>
+          <li>2007 - 2008 - worked as a regional sales manager in telecom equipment producer Sunnada, Fuzhou, China</li>
+          <li>2006 - 2007 - English teacher at Telfort Business Institute, Shanghai, China</li>
+          <li>2005 - 2006 - English teacher at LuQiao primary School, Taizhou, China. </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+{% include "inc-footer.html" %}
+{% endblock %}

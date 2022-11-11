@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}
+Main page
+{% endblock %}
+{% block style %}
+{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    {% block sidebar %}
+        {% include "inc-sidebar.html" %}
+    {% endblock %}
+    <div id="content">
+        <h1>Welcome to my website</h1>
+        <p>Feel free to explore. I have a menu bar with a few interesting links and descriptions.
+            This website design was done in accordance with its copyright owners.</p>
+        <p>I hope this website can help me get noticed by someone and help me get a foothold on my goal -
+            a career in IT.</p>
+        <p>Here's a link to my GitHub repositories<a href="https://github.com/Nikitos-art?tab=repositories"> Click
+            here </a>
+            There are several projects that I have worked on during my studies In the menu bar I wrote a little about
+            myself, my background and my professional experience.</p>
+        <hr>
+        <p></p>
+        <div>
+            <div>
+                <button id="button_cat"> <a style="text-decoration:none" href="/create-category/">Create new category</a></button>
+            </div>
+            <div>
+                <h1>Current categories list</h1>
+                {% for item in objects_list %}
+                <li>
+                    {{item.name}} <span>Number of products: {{item.product_count()}}</span>
+
+                    <a href="/products-list/?id={{item.id}}">Show products</a>
+                </li>
+                {% endfor %}
+                <br>
+                <hr>
+            </div>
+             <div>
+		<li>
+			<a href="/seller-list/">Seller list</a>
+		</li>
+		<li>
+			<a href="/create-seller/">Create seller</a>
+		</li>
+		<li>
+			<a href="/add-seller/">Add seller to product</a>
+		</li>
+	</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+{% include "inc-footer.html" %}
+{% endblock %}

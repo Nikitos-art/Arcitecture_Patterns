@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}
+Main page
+{% endblock %}
+{% block style %}
+{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    {% block sidebar %}
+        {% include "inc-sidebar.html" %}
+    {% endblock %}
+    <div id="content">
+        <h1>Bio and Education</h1>
+        <p> I was born in Pavlovskaya Sloboda. It's a small suburban town right nearby Moscow and lived there untill
+          I was 15. That's when my mom and my future (at that time) stepfather when to the USA. We lived right near Houston,
+          Texas. I went to a local high school there. I was a sophmore and was in my high school soccer team. I scored
+          4 goals in that season! And they even announced my name on PA system a couple of times. Unfortunately we
+          couldn't keep living in the USA, so we decided to travel and go to Shanghai, China. That's when my story begins.
+          Life in China was a whole life chapter for me. When I turned 18 I wento to different countryside schools in
+          China and taught English there. Mostly in Zhejiang and Fujian provinces. I was also on provincial TV there
+          a few times when I had to speak Chinese. It was fun! After 10 years in China my life took another turn and I
+          had to go back to Russia. It was to go back and I didn't really feel home. After the wasr in Ukraine, I moved
+          to neighboring Georgia. Now my family and I are making plans to get to the USA for good since my mom is a
+          naturalized citizen there. I love my parents and really want to see them there. </p>
+        <h2>Primary Education</h2>
+        <p>Pavlovskaya Primary and Middle school, Moscow</p>
+
+        <h2>Secondary Education</h2>
+        <p>Pearland High School, Texas, USA - sophmore year</p>
+        <p>Home schooling - Trent Academy - junioor and senoir years</p>
+
+        <h2>Tertiary Education</h2>
+        <ul>
+          <li>Telfort Business Institute - took a few Business English courses there</li>
+          <li>Fujian Normal University - 3 years of Chinese language Courses </li>
+          <li>Geekbrains - Python Programmer </li>
+          <li>Udemy, Python Morsels, Google Cloud Platform</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+{% include "inc-footer.html" %}
+{% endblock %}

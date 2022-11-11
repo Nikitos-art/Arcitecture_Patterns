@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+Category list
+{% endblock %}
+{% block style %}
+	{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+    <div id="site_content">
+    {% block sidebar %}
+        {% include "inc-sidebar.html" %}
+    {% endblock %}
+    <div id="content">
+        <a href="/">back</a>
+
+        <h1>Category list</h1>
+        <ul>
+
+            {% for item in objects_list %}
+            <li>
+                {{item.name}} <span>Number of products: {{item.product_count()}}</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div>
+            <li><a href="/products-list/">Product list</a></li>
+            <li><a href="/create-product/">Create product</a></li>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}
+Add seller
+{% endblock %}
+{% block style %}
+{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    <div id="content">
+        <div>
+            <a href="/seller-list/">Sellers list</a>
+        </div>
+        <div>
+            <a href="/create-seller/">Create seller</a>
+        </div>
+        <h1>Add seller to product</h1>
+        <form method="post">
+            <select size="3" name="product_name">
+                {% for item in products %}
+                <option value="{{item.name}}">{{item.name}}</option>
+                {% endfor %}
+            </select>
+            <select size="3" name="seller_name">
+                {% for item in sellers %}
+                <option value="{{item.name}}">{{item.name}}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+Create product
+{% endblock %}
+{% block style %}
+	{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    {% block sidebar %}
+        {% include "inc-sidebar.html" %}
+    {% endblock %}
+    <div id="content">
+        <div>
+            <a href="/products-list/?id={{id}}">back</a>
+        </div>
+
+        <br>
+        <br>
+
+        <div>
+            <h1>Create product for category "{{name}}"</h1>
+            <form method="post">
+                <input type="text" name="name" placeholder="Naming">
+                <button type="submit">Save and back to product list</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+Create product
+{% endblock %}
+{% block style %}
+	{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    {% block sidebar %}
+        {% include "inc-sidebar.html" %}
+    {% endblock %}
+    <div id="content">
+        <h1>Create category</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="Naming">
+            <button type="submit">Save and back to main page</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

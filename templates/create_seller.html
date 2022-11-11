@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+Create seller
+{% endblock %}
+{% block style %}
+	{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    <div id="content">
+        <div>
+            <a href="/seller-list/">Sellers list</a>
+        </div>
+        <div>
+            <h1>Create seller</h1>
+            <form method="post">
+                <input type="text" name="name" placeholder="Name">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

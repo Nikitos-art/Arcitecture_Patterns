@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}
+Seller list
+{% endblock %}
+{% block style %}
+{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    <div id="content">
+        <div>
+            <a href="/create-seller/">Create seller</a>
+        </div>
+        <div>
+            <a href="/add-seller/">Add seller to products</a>
+        </div>
+        <h1>Seller list</h1>
+        <div>
+            {% for item in objects_list %}
+            {{item.name}}
+            {% for product in item.products %}
+            {{product.name}}
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

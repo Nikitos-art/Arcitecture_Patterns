@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}
+Product list
+{% endblock %}
+{% block style %}
+	{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<div id="site_content">
+    {% block sidebar %}
+        {% include "inc-sidebar.html" %}
+    {% endblock %}
+    <div id="content">
+        <div>
+            <a href="/">back to main page</a>
+        </div>
+
+        <br>
+        <br>
+
+        <div>
+            <a href="/create-product/?id={{id}}">Create new product</a>
+            <br>
+            <h1>Product list for category "{{name}}"</h1>
+            {% for item in objects_list %}
+            <li>
+                {{item.name}} <span><a href="/copy-product/?name={{item.name}}">copy</a></span>
+            </li>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}
+Products
+{% endblock %}
+{% block style %}
+	{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+	<div id="site_content">
+		{% block sidebar %}
+            {% include "inc-sidebar.html" %}
+        {% endblock %}
+        <div id="content">
+		<h2>Products and services</h2>
+        <p>Here are some products and services avaliable</p>
+        <table style="width:100%; border-spacing:0;">
+          <tr><th>Preduct or Serice</th><th>Description</th></tr>
+          <tr><td>Food deliver</td><td>Direct food delivery to your doorstep</td></tr>
+          <tr><td>Gym trainer</td><td>Personal trainer in any gym</td></tr>
+          <tr><td>Translations</td><td>English/Russian/Chinese translations</td></tr>
+          <tr><td>Tour guide</td><td>Travel tours and hotel discounts</td></tr>
+        </table>
+		</div>
+	</div>
+{% endblock %}
+{% block footer %}
+{% include "inc-footer.html" %}
+{% endblock %}
